@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0%;
+        }
+        body{
+            background: rgb(180,58,179);
+background: linear-gradient(90deg, rgba(180,58,179,1) 39%, rgba(29,214,253,1) 100%);
+display: grid;
+place-items: center;
+height:100vh;
+        }
+        .container{
+            width:70vw;
+            
+        }
+        .item1{
+            background-color: black;
+            color:white;
+            padding: 10px;
+            text-align: center;
+        }
+        #item2{
+            padding: 10px;
+            background-color: white;
+            display: grid;
+            /* grid-template-columns: 20% 40% 40%; */
+            /* grid-template-rows:repeat(7,auto) ; */
+            grid-template-areas: 
+            'h h1 h2'
+            'a a1 a1' 
+            'b b1 b1'
+            'c c1 c2'
+            'd d1 d1'
+            'e . .';
+        }
+
+        #h{
+            grid-area: h;
+            width: 100%;
+        }
+        #h1{
+            grid-area: h1;
+            width: 100%;
+            margin-bottom: 10px;
+    
+        }
+    #h2{
+            grid-area: h2;
+            margin-bottom: 10px;
+        }
+        #a{
+            grid-area: a;
+        }
+        #a1{
+           grid-area: a1;
+           width: 100%;
+           margin-bottom: 10px;
+        }
+       
+        #b{
+            grid-area: b;
+        }
+        #b1{
+           grid-area:b1;
+           width: 100%;
+           margin-bottom: 10px;
+        }
+        #c{
+            grid-area: c;
+        }
+        #c1{
+           grid-area:c1;
+           width: 100%;
+           margin-bottom: 10px;
+        }
+        #c2{
+           grid-area:c2;
+           width: 100%;
+        }
+        #d{
+            grid-area: d;
+        }
+        #d1{
+           grid-area:d1;
+           width: 100%;
+           margin-bottom: 10px;
+        }
+        #e{
+            grid-area: e;
+            width: 100%;
+        }
+        button{
+            background-color: orangered;
+            columns: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        input{
+            width:100%;
+            padding: 10px;
+        }
+        select{
+            width:100%;
+            padding: 10px; 
+        }
+
+       @media screen and (max-width:768px){
+        .body{
+            width: auto;
+            height: auto;
+        }
+        .container{
+            width: auto;
+            height: auto;
+        }
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item1">EVENT REGISTRATION FORM</div>
+        <form>
+        <div id="item2">
+            
+                <div id="h">
+              <label>Name</label>
+              </div>
+              <div id="h1">
+              <input type="text"><br>
+              First name
+            </div>
+              <div id="h2">
+              <input type="text"><br>
+              Last name
+            </div>
+            <div id="a">
+              <label>Company</label>
+              </div>
+              <div id="a1">
+                <input type="text">
+              </div><br>
+              <div id="b">
+                <label>email</label>
+                </div>
+                <div id="b1">
+                  <input type="text" placeholder="example@gmail.com">
+                </div>
+                <div id="c">
+                    <label>Phone</label>
+                    </div>
+                    <div id="c1">
+                      <input type="text"><br>
+                      Area code
+                    </div>
+                    <div id="c2">
+                        <input type="text"><br>
+                        Phone Number
+                      </div>
+                      <div id="d">
+                        <label>Subject</label>
+                        </div>
+                        <div id="d1">
+                          <select>
+                            <option>Choose Option</option>
+                            <option>Maths</option>
+                            <option>statistics</option>
+                            <option>Computer Science</option>
+                          </select>
+                        </div><br>
+                        <div id="e">
+                            <p>Are you an Existing customer?</p>
+                            <br>
+                            <div style="display: flex; text-align: center;">
+                            <input type="radio">Yes
+                            <input type="radio">No
+                            </div>
+                            <br><br>
+                            <button>Register</button>
+                        </div>
+               </div>
+            </form>
+        </div>
+
+    
+</body>
+</html>
